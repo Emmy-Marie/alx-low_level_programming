@@ -7,9 +7,10 @@
 
 int main(void)
 {
-        char string_out[] = "\"Programming is like building a multilingual puzzle";
-        puts(string_out);
+	char string_[] = "\"Programming is like building a multilingual puzzle";
 
-        return (0);
+	puts(string_out);
+
+	return (0);
 }
 
