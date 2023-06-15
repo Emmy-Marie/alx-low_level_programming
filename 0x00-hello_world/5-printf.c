@@ -2,7 +2,7 @@
 
 /**
  * main - A program that prints a string using the printf function
- * Return=0: (The program runs a success)
+ * Return:0 (The program runs a success)
  */
 
 int main(void)
