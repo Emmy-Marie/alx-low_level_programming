@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - A program assigns randon numbers to n and determine if zero,+ve or -ve
+ * main - A program assigns random numbers and determines if zero,+ve or -ve
  * Return:0 (Success)
  */
 
@@ -18,13 +18,13 @@ int main(void)
 	/* your code goes there */
 	if (n == 0)
 	{
-		printf("%d\n is zero", n);
+		printf("%d is zero\n", n);
 	} else if (n > 0)
 	{
-		printf("%d\n is positive", n);
+		printf("%d is positive\n", n);
 	} else
 	{
-		printf("%d\n is negative", n);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
