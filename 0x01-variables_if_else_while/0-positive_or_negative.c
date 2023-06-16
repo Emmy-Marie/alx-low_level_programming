@@ -3,6 +3,11 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ * main - A program assigns randon numbers to n and determine if zero,+ve or -ve
+ * Return:0 (Success)
+ */
+
 int main(void)
 {
 	int n;
@@ -12,13 +17,13 @@ int main(void)
 	/* your code goes there */
 	if (n == 0)
 	{
-		printf("%d is zero", n);
+		printf("%d\n is zero", n);
 	} else if (n > 0)
 	{
-		printf("%d is positive", n);
+		printf("%d\n is positive", n);
 	} else
 	{
-		printf("%d is negative", n);
+		printf("%d\n is negative", n);
 	}
 	return (0);
 }
