@@ -12,14 +12,12 @@
 
 int main(void)
 {
-	int n;
+	int n, a;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	/* a is the last digit of n */
-	int a;
-
 	a = n % 10;
 	if (a == 0)
 	{
