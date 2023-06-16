@@ -18,7 +18,8 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	/* a is the last digit of n */
-	a = n % 10;
+	int a = n % 10;
+
 	if (a == 0)
 	{
 		printf("Last digit of %d", n, "is %d", a, "and is 0");
