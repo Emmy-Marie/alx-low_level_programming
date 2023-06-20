@@ -8,8 +8,9 @@
 
 int _islower(int c)
 {
-	int c;
+	char r;
 
+	c = 0;
 	while (c >= 0)
 	{
 		r = _putchar(c + '0');
