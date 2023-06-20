@@ -1,11 +1,8 @@
 #include "main.h"
 
 /**
- * main - A program that prints all lowercase alphabets
+ * print_alphabet - Entry point of the program
  * Return:0 (Success)
- * _putchar - Function that prints the character c to stdout
- * @c - The character to be printed
- * print_alphabet - A prototype function to print the alphabets
  */
 
 void print_alphabet(void)
