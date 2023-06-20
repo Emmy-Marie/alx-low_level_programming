@@ -3,25 +3,10 @@
 /**
  * _islower - Entry point
  * @c: The integer value
- * Return:0 - (Success)
+ * Return: 1 if lowercase and 0 if otherwise
  */
 
 int _islower(int c)
 {
-	char r;
-
-	c = 0;
-	while (c >= 0)
-	{
-		r = _putchar(c + '0');
-		if (r < 'a' || r > 'z')
-		{
-			_putchar('0');
-		}
-		else
-		{
-			_putchar('1');
-		}
-	}
-	return (0);
+	return (c < 'a' || c > 'z');
 }
