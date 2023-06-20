@@ -1,10 +1,14 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * main - A program that prints the word "_putchar"
  * Return:0 (Success)
  */
+
+int _putchar(char c)
+{
+	return write(1, &c, 1);
+}
 
 int main(void)
 {
