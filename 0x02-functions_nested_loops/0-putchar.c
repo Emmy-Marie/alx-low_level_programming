@@ -3,7 +3,8 @@
 /**
  * main - A program that prints the word "_putchar"
  * Return:0 (Success)
- */
+ * _putchar is already declared
+*/
 
 int main(void)
 {
