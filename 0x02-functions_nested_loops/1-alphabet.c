@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * main - A program that prints all lowercase alphabets
@@ -8,10 +7,6 @@
  * @c - The character to be printed
  * print_alphabet - A prototype function to print the alphabets
  */
-
-void print_alphabet(void);
-
-int _putchar(char c);
 
 void print_alphabet(void)
 {
