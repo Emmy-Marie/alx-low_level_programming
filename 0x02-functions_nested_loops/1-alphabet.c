@@ -9,6 +9,8 @@
  * print_alphabet - A prototype function to print the alphabets
  */
 
+void print_alphabet(void);
+
 void print_alphabet(void)
 {
 	char low = 'a';
