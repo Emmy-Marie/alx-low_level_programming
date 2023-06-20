@@ -9,9 +9,9 @@
 
 int _islower(int c)
 {
-	int c = c + '0';
+	int r = r + '0';
 
-	if (c < 'a' || c > 'z')
+	if (r < 'a' || r > 'z')
 	{
 		_putchar('0');
 	}
