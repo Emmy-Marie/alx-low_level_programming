@@ -2,14 +2,13 @@
 
 /**
  * _islower - Entry point
- * @c - The integer value
- * Return:1 - if c is lower case
- * Return:0 - if otherwise
+ * @c: The integer value
+ * Return:0 - (Success)
  */
 
 int _islower(int c)
 {
-	int r = r + '0';
+	int r = c + '0';
 
 	if (r < 'a' || r > 'z')
 	{
@@ -19,4 +18,5 @@ int _islower(int c)
 	{
 		_putchar('1');
 	}
+	return (0);
 }
