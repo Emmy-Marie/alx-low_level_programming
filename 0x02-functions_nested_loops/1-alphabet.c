@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * main - A program that prints all lowercase alphabets
@@ -7,13 +7,6 @@
  * @c - The character to be printed
  * print_alphabet - A prototype function to print the alphabets
  */
-
-int main(void)
-{
-	print_alphabet();
-
-	return (0);
-}
 
 void print_alphabet(void)
 {
