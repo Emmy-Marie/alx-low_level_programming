@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * times_tabla - Entry point
+ * times_table - Entry point
  * Return: 9 times table
  */
 
