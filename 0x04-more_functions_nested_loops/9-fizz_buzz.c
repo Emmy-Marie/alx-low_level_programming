@@ -1,8 +1,8 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - Print 1 to 100 and replace multiples of 3 with fizz, 5 with buzz
+ * main - Print 1 to 100 and replace multiples of
+ * 3 with fizz, 5 with buzz
  * and multiples of both 3 and 5 with fizzBuzz
  * Return: 0 (success)
  */
