@@ -1,0 +1,32 @@
+#include "main.h"
+
+/**
+ * leet - A function that encodes letters of a string into numbers
+ * @b: char pointer variable
+ * Return: encode result
+ */
+
+char *leet(char *b)
+{
+	int i, j;
+
+	char *y = "aAeEoOtTlL";
+	char *z = "4433007711";
+
+	i = 0;
+	while (b[i] != '\0')
+	{
+		j = 0;
+		while (j < 10)
+		{
+			if (b[i] == y[j])
+			{
+				b[i] = z[j];
+			}
+			j++;
+		}
+		i++;
+	}
+
+	return (b);
+}

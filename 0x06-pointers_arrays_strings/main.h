@@ -7,5 +7,6 @@ int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
 char *string_toupper(char *b);
 char *cap_string(char *b);
+char *leet(char *b);
 
 #endif /* MAIN_H */
