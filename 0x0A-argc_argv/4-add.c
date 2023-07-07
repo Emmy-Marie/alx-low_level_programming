@@ -1,67 +1,85 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+#include "main.h"
 
 /**
- * main - Entry point - A program that adds positive numbers.
- *        if no number is passed, print 0.
- * @argc: Argument count
- * @argv: Argument vector
- * Return: 0 if successful and 1 if otherwise
+ * _atoi - A function that converts a string to an integer
+ * @s: string to be converted
+ *
+ * Return: the int converted from the string
  */
+int _atoi(char *s)
+{
+	int i, d, n, len, f, digit;
 
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (i < len && f == 0)
+	{
+		if (s[i] == '-')
+			++d;
+
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
+		}
+		i++;
+	}
+
+	if (f == 0)
+		return (0);
+
+	return (n);
+}
+
+/**
+ * main - A program that adds two positive number
+ * @argc: number of arguments
+ * @argv: array of arguents
+ *
+ * Return: 0 (Success) or 1 if otherwise
+ */
 int main(int argc, char *argv[])
 {
-	int i, j, box, sum, num;
+	int sum, num, i, j, k;
 
-	if (argc == 1)
-	{
-		printf("%d\n", 0);
-		return (0);
-	}
+	sum = 0;
 
-	if (atoi(argv[1]) >= 0)
+	for (i = 1; i < argc; i++)
 	{
-		box = atoi(argv[1]);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
-
-	for (i = 2; i < argc; i++)
-	{
-		bool valid = true;
-		char *arg = argv[i];
-
-		for (j = 0; arg[j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (arg[j] < '0' || arg[j] > '9')
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
-				valid = false;
-				break;
+				puts("Error");
+				return (1);
 			}
 		}
+	}
 
-		if (!valid)
-		{
-			printf("Error\n");
-			return (1);
-		}
-
-		num = atoi(arg);
+	for (k = 1; k < argc; k++)
+	{
+		num = _atoi(argv[k]);
 		if (num >= 0)
 		{
 			sum += num;
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
 	}
 
-	printf("%d\n", box + sum);
+	printf("%d\n", sum);
 	return (0);
 }
