@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 	}
 
 	/* Allocate memory for the array of pointers to width */
-	array = malloc(width * sizeof(int *));
+	array = malloc(height * sizeof(int *));
 
 	/* Check if memory allocation was successful */
 	if (array == NULL)
@@ -28,9 +28,9 @@ int **alloc_grid(int width, int height)
 	}
 
 	/* Allocate memory for each row */
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		array[i] = malloc(height * sizeof(int));
+		array[i] = malloc(width * sizeof(int));
 
 		/* Check if memory allocation was successful */
 		if (array[i] == NULL)
@@ -42,6 +42,11 @@ int **alloc_grid(int width, int height)
 			}
 			free(array);
 			return (NULL);
+		}
+		/* Initialize elements to 0 */
+		for (j = 0; j < width; j++)
+		{
+			array[i][j] = 0;
 		}
 	}
 	return (array);
