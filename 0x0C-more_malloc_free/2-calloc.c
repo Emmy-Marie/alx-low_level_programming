@@ -1,0 +1,59 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * _memset - A function that fills memory with a constant byte
+ * @s: pointer to a char variable
+ * @b: constant char value that will be used to fill the memory block
+ * @n: number of bytes to be filled with char b starting from s
+ * Return: a pointer to the memory area s
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	char *p = s; /* p initially points to the same location as s */
+	unsigned int j;
+
+	j = 0;
+	for (j = 0; j < n; j++)
+	{
+		*p = b; /* byte pointed to by p is set to the value of b */
+		p++; /* p increments to point to the next byte */
+	}
+
+	return (s); /* we return the function to the original pointer s */
+}
+
+/**
+ * _calloc - A function that allocates memory for an array, using malloc
+ * @nmemb: Number of blocks to be allocated.
+ * @size: Size of each block in bytes.
+ * Return: returns a pointer to allocated memory. Returns NULL if nmemb or size
+ *         is 0. Returns NULL if malloc fails.
+ */
+
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	char *ptr;
+
+	/* Check if nmemb or size is 0 */
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+
+	/* Allocate memory to the blocks */
+	ptr = malloc(nmemb * size);
+
+	/* Check for allocation fail. If successful, set memory to 0 */
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		_memset(ptr, 0, nmemb * size); /* _memset function */
+	}
+
+	return (ptr);
+}
