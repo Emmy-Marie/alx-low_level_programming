@@ -12,6 +12,14 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	/* Check if d is NULL */
+	if (d == NULL)
+	{
+		/* Allocate memory for new struct dog if d is NULL */
+		d = malloc(sizeof(struct dog));
+	}
+
+	/* Assgn the name, age and owner values to struct dog members */
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
