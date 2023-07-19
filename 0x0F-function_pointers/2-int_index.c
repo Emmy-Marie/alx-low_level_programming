@@ -14,14 +14,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	/* Check if the size is invalid */
-	if (size <= 0)
-	{
-		return (-1);
-	}
-
 	/* Check is the array and size are valid */
-	if (array && size)
+	if (array != NULL && size)
 	{
 		i = 0;
 		while (i < size)
