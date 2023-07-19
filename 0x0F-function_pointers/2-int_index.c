@@ -21,7 +21,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		while (i < size)
 		{
 			/* Call the function pointed by cmp on each element */
-			if ((*cmp)(array[i]) != 0)
+			if (cmp(array[i]) != 0)
 			{
 				return (i); /* Return index if non-zero */
 			}
