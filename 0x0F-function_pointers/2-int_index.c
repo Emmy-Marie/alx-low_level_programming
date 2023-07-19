@@ -20,7 +20,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		for (i = 0; i < size; i++)
 		{
 			/* Call the function pointed by cmp on each element */
-			if (cmp(array[i]) != 0)
+			if (cmp(array[i]) == 1)
 			{
 				return (i); /* Return index if non-zero */
 			}
