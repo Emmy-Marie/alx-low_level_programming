@@ -10,6 +10,18 @@
 
 void print_name(char *name, void (*f)(char *))
 {
+	/* Check if name is NULL. If yes, function returns immediately */
+	if (name == NULL)
+	{
+		return;
+	}
+
+	/* Check if f is NULL. If yes, function returns immediately */
+	if (f == NULL)
+	{
+		return;
+	}
+
 	/* Derefernce the function pointer & invoke the function it points to */
 	(*f)(name); /* Pass 'name' as an argument */
 }
