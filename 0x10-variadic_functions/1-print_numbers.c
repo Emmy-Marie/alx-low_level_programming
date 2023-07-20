@@ -16,12 +16,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	/* Initialize the va_list "list" with the variable argument list */
 	va_start(list, n);
 
-	/* If n is 0, no numbers to print */
-	if (n == 0)
-	{
-		return;
-	}
-
 	/* Loop through the arguments,print the numbers and string in between */
 	for (i = 0; i < n; i++)
 	{
