@@ -16,8 +16,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	/* Initialize the va_list "numbers" with the variable argument list */
 	va_start(numbers, n);
 
-	/* If separator is null, do not print. If n is 0, no numbers to print */
-	if (separator == NULL || n == 0)
+	/* If n is 0, no numbers to print */
+	if (n == 0)
 	{
 		return;
 	}
@@ -29,7 +29,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		/* Condition: Don't print string after the last number */
 		if (i != n)
 		{
-			printf("%s", separator);
+			/* If separator is NULL, don't print it */
+			if (separator != NULL)
+			{
+				printf("%s", separator);
+			}
 		}
 	}
 	printf("\n"); /* New line */
