@@ -10,11 +10,11 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list numbers; /* Giving my list a name */
+	va_list list; /* Giving my list a name */
 	unsigned int i;
 
-	/* Initialize the va_list "numbers" with the variable argument list */
-	va_start(numbers, n);
+	/* Initialize the va_list "list" with the variable argument list */
+	va_start(list, n);
 
 	/* If n is 0, no numbers to print */
 	if (n == 0)
@@ -23,21 +23,26 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 
 	/* Loop through the arguments,print the numbers and string in between */
-	for (i = 1; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(numbers, unsigned int));
-		/* Condition: Don't print string after the last number */
-		if (i != n)
+		/* If separator is NULL, do not print the string */
+		if (separator == NULL)
 		{
-			/* If separator is NULL, don't print it */
-			if (separator != NULL)
-			{
-				printf("%s", separator);
-			}
+			printf("%d", va_arg(list, unsigned int));
+		}
+		/* Print the first number if separator is not NULL*/
+		else if (separator != NULL && i == 0)
+		{
+			printf("%d", va_arg(list, unsigned int));
+		}
+		/* Print the string followed by other numbers */
+		else
+		{
+			printf("%s%d", separator, va_arg(list, unsigned int));
 		}
 	}
 	printf("\n"); /* New line */
 
 	/* End of the list */
-	va_end(numbers);
+	va_end(list);
 }
