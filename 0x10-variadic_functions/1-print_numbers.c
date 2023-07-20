@@ -28,17 +28,17 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		/* If separator is NULL, do not print the string */
 		if (separator == NULL)
 		{
-			printf("%d", va_arg(list, unsigned int));
+			printf("%d", va_arg(list, int));
 		}
 		/* Print the first number if separator is not NULL*/
 		else if (separator != NULL && i == 0)
 		{
-			printf("%d", va_arg(list, unsigned int));
+			printf("%d", va_arg(list, int));
 		}
 		/* Print the string followed by other numbers */
 		else
 		{
-			printf("%s%d", separator, va_arg(list, unsigned int));
+			printf("%s%d", separator, va_arg(list, int));
 		}
 	}
 	printf("\n"); /* New line */
