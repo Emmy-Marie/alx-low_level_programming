@@ -1,6 +1,7 @@
 #include "lists.h"
 
-/** free_list - A function that frees a linked list
+/**
+ * free_list - A function that frees a list
  * @head: The list to be freed
  */
 
