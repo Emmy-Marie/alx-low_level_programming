@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet - Entry point of the program
- * Return:0 (Success)
+ * Return: 0 (Success)
  */
 
 void print_alphabet(void)

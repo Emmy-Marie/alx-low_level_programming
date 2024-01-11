@@ -1,1 +1,1 @@
-This contains completed tasks while learning C programming
+This directory contains tasks on C programming
